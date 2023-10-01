@@ -7,7 +7,7 @@ int main()
 {
     setlocale(0, "");
 
-    cout << sizeof(int) << "\n" << sizeof(short int) << "\n" << sizeof(long int) << "\n" << sizeof(float) << "\n" << sizeof(double) << "\n" << sizeof(long double) << "\n";
+    cout <<"Размер в байтах у различных переменных:"<<"\n" << "int" << " " << sizeof(int) << "\n" << "short int" << " " << sizeof(short int) << "\n" << "long int" << " " << sizeof(long int) << "\n" << "float" << " " << sizeof(float) << "\n" << "double" << " " << sizeof(double) << "\n" << "long double" << " " << sizeof(long double) << "\n";
  
 
     /////////
