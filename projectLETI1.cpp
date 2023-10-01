@@ -15,29 +15,37 @@ int main()
     cin >> inputnumber;
     cout << "Выберите тип числа(введите 1 для int, 2 для shortint)"<<"\n";
     int order = sizeof(int) * 8 - 1;
-        int mask = 1 << order;
+        unsigned int mask = 1 << order;
         for (int i = 0; i <= order; i++) {
             cout << ((inputnumber & mask) ? 1 : 0);
-            inputnumber = inputnumber << 1;
+            mask = mask >> 1;
             if (i == 0 or (i + 1) % 8 == 0) {
                 cout << " ";
             }
         }
-    ////float////
+    
+        
+        
+        
+        
+        ////float////
 
-    union MyUnion{
+    
+     
+        
+        union MyUnion{
         float floatinTObit;
         int int2bitfloat;
         };
     cout <<"\n" << "Введите значение для типа float(используйте . для отделения целой части) \n";
     MyUnion g;
     cin >> g.floatinTObit;
-    
     cout <<"\n"<<"float \n";
-    /// add new mask for float
-    for (int i = 0; i <= order; i++) {
-        cout << ((g.int2bitfloat & mask) ? 1 : 0);
-        g.int2bitfloat = g.int2bitfloat << 1;
+    int orderf = sizeof(float) * 8 - 1;
+    unsigned int maskf = 1 << orderf;
+    for (int i = 0; i <= orderf; i++) {
+        cout << ((g.int2bitfloat & maskf) ? 1 : 0);
+        maskf = maskf >> 1;
         if (i == 0 or (i + 1) % 8 == 0) {
             cout << " ";
         }
