@@ -19,4 +19,10 @@ int main()
     longdoublea = fake;
     cout << sizeof(fake) << "\n" << sizeof(short int) << "\n" << sizeof(long int) << "\n" << sizeof(float) << "\n" << sizeof(double) << "\n" << sizeof(long double) << "\n";
     return 0;
+
+
+
+
+
+
 }
