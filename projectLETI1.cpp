@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     setlocale(0, "");
-
+  
     cout <<"Размер в байтах у различных переменных:"<<"\n" << "int" << " " << sizeof(int) << "\n" << "short int" << " " << sizeof(short int) << "\n" << "long int" << " " << sizeof(long int) << "\n" << "float" << " " << sizeof(float) << "\n" << "double" << " " << sizeof(double) << "\n" << "long double" << " " << sizeof(long double) << "\n";
     
     /// 
@@ -24,16 +24,21 @@ int main()
             }
         }
     ////float////
-    union {
-        int int2bitfloat;
-        float floatin = 3.14;
-    };
 
+    union MyUnion{
+        float floatinTObit;
+        int int2bitfloat;
+        };
+    cout <<"\n" << "Введите значение для типа float(используйте . для отделения целой части) \n";
+    MyUnion g;
+    cin >> g.floatinTObit;
+    g.int2bitfloat;
+    
     cout <<"\n"<<"float \n";
     /// add new mask for float
     for (int i = 0; i <= order; i++) {
-        cout << ((int2bitfloat & mask) ? 1 : 0);
-        int2bitfloat = int2bitfloat << 1;
+        cout << ((g.int2bitfloat & mask) ? 1 : 0);
+        g.int2bitfloat = g.int2bitfloat << 1;
         if (i == 0 or (i + 1) % 8 == 0) {
             cout << " ";
         }
