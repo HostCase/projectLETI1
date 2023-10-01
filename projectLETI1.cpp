@@ -32,7 +32,6 @@ int main()
     cout <<"\n" << "Введите значение для типа float(используйте . для отделения целой части) \n";
     MyUnion g;
     cin >> g.floatinTObit;
-    g.int2bitfloat;
     
     cout <<"\n"<<"float \n";
     /// add new mask for float
