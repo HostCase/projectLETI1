@@ -6,19 +6,8 @@ using namespace std;
 int main()
 {
     setlocale(0, "");
-    int fake;
-    fake = 1;
-    short int shorta;
-    shorta = fake;
-    long int longa;
-    longa = fake;
-    float floata;
-    floata = fake;
-    double doublea;
-    doublea = fake;
-    long double longdoublea;
-    longdoublea = fake;
-    cout << sizeof(fake) << "\n" << sizeof(short int) << "\n" << sizeof(long int) << "\n" << sizeof(float) << "\n" << sizeof(double) << "\n" << sizeof(long double) << "\n";
+
+    cout << sizeof(int) << "\n" << sizeof(short int) << "\n" << sizeof(long int) << "\n" << sizeof(float) << "\n" << sizeof(double) << "\n" << sizeof(long double) << "\n";
  
 
     /////////
@@ -29,7 +18,7 @@ int main()
     cout << "Введите число" << "\n";
     cin >> inputnumber;
     cout << "Выберите тип числа(введите 1 для int, 2 для shortint)";
-    int order = sizeof(fake) * 8 - 1;
+    int order = sizeof(int) * 8 - 1;
         int mask = 1 << order;
     for (int i = 0; i <= order; i++) {
         cout << ((inputnumber & mask) ? 1 : 0);
