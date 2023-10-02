@@ -46,7 +46,7 @@ int main()
     for (int i = 0; i <= orderf; i++) {
         cout << ((g.int2bitfloat & maskf) ? 1 : 0);
         maskf = maskf >> 1;
-        if (i == 0 or (i + 1) % 8 == 0) {
+        if (i == 0 or i==8) {
             cout << " ";
         }
     }
