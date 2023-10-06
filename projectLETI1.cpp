@@ -82,6 +82,22 @@ int main()
 
     else if (choosetype == 4) {
         cout << "\nпочему...";
+        union MyUnion {
+            unsigned int DoubleXdouble[2];
+            double doubleintobit;
+        };
+        MyUnion G;
+        cin >> G.doubleintobit;
+        for (int i = 0; i <= 1; i++); {
+            return 0;
+
+
+
+
+        }
+
+
+
     }
     else {
         cout << "Такого варианта нет";
