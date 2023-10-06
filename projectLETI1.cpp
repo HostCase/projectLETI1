@@ -87,12 +87,13 @@ int main()
             double doubleintobit;
         };
         MyUnion G;
+        cout << "Введите значение для double\n";
         cin >> G.doubleintobit;
         for (int i = 0; i <= 1; i++); {
             int orderd = sizeof(int) * 8 - 1;
             unsigned int maskd = 1 << orderd;
             for (int idou = 0; idou <= orderd; idou++)
-                cout << ((G.DoubleXdouble & maskd) ? 1 : 0);
+                cout << ((G.DoubleXdouble[0] & maskd) ? 1 : 0);
 
 
 
