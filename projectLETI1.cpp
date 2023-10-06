@@ -83,7 +83,7 @@ int main()
     else if (choosetype == 4) {
         cout << "\nпочему...";
         union MyUnion {
-            unsigned int DoubleXdouble[2];
+            unsigned int doubleXdouble[2];
             double doubleintobit;
         };
         MyUnion G;
@@ -93,7 +93,13 @@ int main()
             int orderd = sizeof(int) * 8 - 1;
             unsigned int maskd = 1 << orderd;
             for (int idou = 0; idou <= orderd; idou++)
-                cout << ((G.DoubleXdouble[0] & maskd) ? 1 : 0);
+                cout << ((G.doubleXdouble[1] & maskd) ? 1 : 0);
+                unsigned int currentBitofDouble = G.doubleXdouble[1] & maskd;
+                cout <<"\n" <<currentBitofDouble;
+                currentBitofDouble = currentBitofDouble >> 1;
+                cout << "\n" << currentBitofDouble;
+
+
 
 
 
