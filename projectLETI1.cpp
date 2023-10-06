@@ -89,11 +89,16 @@ int main()
         MyUnion G;
         cin >> G.doubleintobit;
         for (int i = 0; i <= 1; i++); {
-            return 0;
+            int orderd = sizeof(int) * 8 - 1;
+            unsigned int maskd = 1 << orderd;
+            for (int idou = 0; idou <= orderd; idou++)
+                cout << ((G.DoubleXdouble & maskd) ? 1 : 0);
 
 
 
 
+
+            
         }
 
 
