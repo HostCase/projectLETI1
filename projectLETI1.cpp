@@ -19,6 +19,8 @@ int main()
         cout << "float" << " " << sizeof(float) << "\n";
         cout << "double" << " " << sizeof(double) << "\n";
         cout << "long double" << " " << sizeof(long double) << "\n";
+        cout << "char" << " " << sizeof(char) << "\n";
+        cout << "bool" << " " << sizeof(bool) << "\n";
     }
     else if (choosetype == 2) {
         int inputnumber;
@@ -58,16 +60,16 @@ int main()
         cout << "\n" << "Введите значение для типа float(используйте . для отделения целой части) \n";
         MyUnion g;
         cin >> g.floatinTObit;
-        cout << "Сколько раз инвертировать число?'\n";
+        cout << "Сколько раз инвертировать число?\n";
         cin >> inversionbit;
-        cout << "\n" << "float \n";
+        cout << "float \n";
         int orderf = sizeof(float) * 8 - 1;
         unsigned int maskf = 1 << orderf;
         for (int i = 0; i <= orderf; i++) {
             if (inversionbit == 0 or inversionbit % 2 == 0) {
                 cout << ((g.int2bitfloat & maskf) ? 1 : 0);
             }
-            else{
+            else {
                 cout << ((g.int2bitfloat & maskf) ? 0 : 1);
             }
             maskf = maskf >> 1;
@@ -78,12 +80,11 @@ int main()
     }
 
 
-    else if (choosetype = 4) {
+    else if (choosetype == 4) {
         cout << "\nпочему...";
-
-
-
-
     }
-        return 0;
+    else {
+        cout << "Такого варианта нет";
+    }
+    return 0;
 }
