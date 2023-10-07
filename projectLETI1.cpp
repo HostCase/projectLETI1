@@ -8,6 +8,7 @@ int main()
     setlocale(0, "");
     int choosetype, inversionbit;
     cout << "В данной работе выполнено идз номер 3\n";
+    cout << "Вывод битов различных переменных\n";
     cout << "Выберите номер задания\n1 Вывести задание номер один(бит буйт) \n2 Вывести задание номер два(int)\n3 Вывести задание номер три(float)\n4 Вывести задание номер четыре(его нет)\n";
     cin >> choosetype;
 
@@ -35,7 +36,7 @@ int main()
                 cout << ((inputnumber & mask) ? 1 : 0);
             }
             else {
-                cout << ((inputnumber & mask) ? 0 : 1);
+                cout << ((~inputnumber & mask) ? 1 : 0);
             }
             mask = mask >> 1;
             if (i == 0 or (i + 1) % 8 == 0) {
@@ -43,7 +44,6 @@ int main()
             }
         }
     }
-
 
 
 
@@ -60,9 +60,8 @@ int main()
         cout << "\n" << "Введите значение для типа float(используйте . для отделения целой части) \n";
         MyUnion g;
         cin >> g.floatinTObit;
-        cout << "Сколько раз инвертировать число?\n";
+        cout << "Сколько раз инвертировать?\n";
         cin >> inversionbit;
-        cout << "float \n";
         int orderf = sizeof(float) * 8 - 1;
         unsigned int maskf = 1 << orderf;
         for (int i = 0; i <= orderf; i++) {
@@ -70,13 +69,15 @@ int main()
                 cout << ((g.int2bitfloat & maskf) ? 1 : 0);
             }
             else {
-                cout << ((g.int2bitfloat & maskf) ? 0 : 1);
+                cout << ((~g.int2bitfloat & maskf) ? 1 : 0);
             }
             maskf = maskf >> 1;
             if (i == 0 or i == 8) {
                 cout << " ";
             }
         }
+
+
     }
 
 
