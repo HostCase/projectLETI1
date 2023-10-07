@@ -5,10 +5,10 @@ using namespace std;
 
 int main()
 {
-    setlocale(0, "");
+    
+        setlocale(0, "");
     int choosetype, inversionbit;
     cout << "В данной работе выполнено идз номер 3\n";
-    cout << "Вывод битов различных переменных\n";
     cout << "Выберите номер задания\n1 Вывести задание номер один(бит буйт) \n2 Вывести задание номер два(int)\n3 Вывести задание номер три(float)\n4 Вывести задание номер четыре(его нет)\n";
     cin >> choosetype;
 
@@ -36,7 +36,8 @@ int main()
                 cout << ((inputnumber & mask) ? 1 : 0);
             }
             else {
-                cout << ((~inputnumber & mask) ? 1 : 0);
+                int inputnumber2 = ~inputnumber;
+                cout << ((inputnumber2 & mask) ? 1 : 0);
             }
             mask = mask >> 1;
             if (i == 0 or (i + 1) % 8 == 0) {
@@ -87,5 +88,7 @@ int main()
     else {
         cout << "Такого варианта нет";
     }
+
+
     return 0;
 }
