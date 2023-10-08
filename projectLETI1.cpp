@@ -70,7 +70,8 @@ int main()
                 cout << ((g.int2bitfloat & maskf) ? 1 : 0);
             }
             else {
-                cout << ((~g.int2bitfloat & maskf) ? 1 : 0);
+                int in2bitfloat2 = ~g.int2bitfloat;
+                cout << ((in2bitfloat2 & maskf) ? 1 : 0);
             }
             maskf = maskf >> 1;
             if (i == 0 or i == 8) {
